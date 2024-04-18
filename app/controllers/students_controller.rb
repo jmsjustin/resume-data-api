@@ -21,6 +21,11 @@ class StudentsController < ApplicationController
     render :show
   end
 
+  def show
+    @student = Student.find_by(id: params[:id])
+    render :show
+  end
+
   def update
     @student = Student.find_by(id: params[:id])
     @student.update(
