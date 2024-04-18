@@ -9,12 +9,12 @@ class CapstonesControllerTest < ActionDispatch::IntegrationTest
     assert_equal Capstone.count, data.length
   end
 
-  # test "create" do
-  #   assert_difference "Capstone.count", 1 do
-  #     post "/capstones.json", params: { name: "lake", description: "create test", url: "test.com", screenshot: "test" }
-  #     assert_response 200
-  #   end
-  # end
+  test "create" do
+    assert_difference "Capstone.count", 1 do
+      post "/capstones.json", params: { name: "lake", description: "create test", url: "test.com", screenshot: "test" }
+      assert_response 200
+    end
+  end
 
   test "show" do
     get "/capstones/#{Capstone.first.id}.json"

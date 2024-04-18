@@ -9,16 +9,15 @@ class CapstonesController < ApplicationController
     render :show
   end
 
-  # fix crete action
-  # def create
-  #   @capstone = Capstone.create(
-  #     name: params[:name],
-  #     description: params[:description],
-  #     url: params[:url],
-  #     screenshot: params[:screenshot],
-  #   )
-  #   render :show
-  # end
+  def create
+    @capstone = Capstone.create(
+      name: params[:name],
+      description: params[:description],
+      url: params[:url],
+      screenshot: params[:screenshot],
+    )
+    render :show
+  end
 
   def update
     @capstone = Capstone.find_by(id: params[:id])
