@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "posts#index"
   get "/students" => "students#index"
-  post "/students" => "students#create"
   get "/students/:id" => "students#show"
+  post "/students" => "students#create"
+  patch "/students/:id" => "students#update"
 end

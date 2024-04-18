@@ -27,11 +27,21 @@ class StudentsControllerTest < ActionDispatch::IntegrationTest
       assert_response 200
     end
   end
+
   test "show" do
     get "/students/#{Student.first.id}.json"
     assert_response 200
 
     data = JSON.parse(response.body)
     assert_equal ["id", "first_name", "last_name", "email", "phone_number", "short_bio", "linkedin_url", "twitter_handle", "website_url", "resume_url", "github_url", "photo", "created_at", "updated_at"], data.keys
+  end
+
+  test "update" do
+    student = Student.first
+    patch "/students/#{student.id}.json", params: { first_name: "Updated name" }
+    assert_response 200
+
+    data = JSON.parse(response.body)
+    assert_equal "Updated name", data["first_name"]
   end
 end
