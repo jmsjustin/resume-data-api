@@ -9,4 +9,5 @@ Rails.application.routes.draw do
   # root "posts#index"
   get "/students" => "students#index"
   post "/students" => "students#create"
+  get "/students/:id" => "students#show"
 end
