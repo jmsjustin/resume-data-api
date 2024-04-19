@@ -19,6 +19,11 @@ Rails.application.routes.draw do
   patch "/capstones/:id" => "capstones#update"
   delete "/capstones/:id" => "capstones#destroy"
 
+  get "/experiences" => "experiences#index"
+  get "/experiences/:id" => "experiences#show"
+  post "/experiences" => "experiences#create"
+  patch "/experiences/:id" => "experiences#update"
+  delete "/experiences/:id" => "experiences#destroy"
   post "/users" => "users#create"
   post "/sessions" => "sessions#create"
 end
