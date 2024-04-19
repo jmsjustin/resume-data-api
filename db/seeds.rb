@@ -14,3 +14,5 @@ Student.create!(first_name: "Reginald", last_name: "Hornswaggle", email: "reggie
 Student.create!(first_name: "Concerned", last_name: "Ape", email: "concernedape@example.com", phone_number: "111-222-3333", short_bio: "creator of Stardew Valley -- working on Haunted Chocolatier", linkedin_url: "linkedin.com/concernedape", twitter_handle: "ConcernedApe", website_url: "https://www.stardewvalley.net/", resume_url: "resume.com/test", github_url: "github.com/test", photo: "https://pbs.twimg.com/profile_images/703728939995308032/IBU6i2IG_400x400.jpg")
 
 Capstone.create!(name: "My Capstone Project", description: "This is my capstone project", url: "capstone.com", screenshot: "capstone")
+
+Experience.create!(start_date: "2024-04-24", end_date: "2024-12-24", job_title: "student", company_name: "Actualize", details: "learning to be a software engineer.")
