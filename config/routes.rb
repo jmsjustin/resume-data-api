@@ -20,4 +20,5 @@ Rails.application.routes.draw do
   delete "/capstones/:id" => "capstones#destroy"
 
   post "/users" => "users#create"
+  post "/sessions" => "sessions#create"
 end
