@@ -11,7 +11,7 @@ class ExperiencesControllerTest < ActionDispatch::IntegrationTest
 
   test "create" do
     assert_difference "Experience.count", 1 do
-      post "/experiences.json", params: { start_date: "2024-01-14", end_date: "2024-5-16", job_title: "student", company_name: "actualize", details: "time to become the best software engineer i can be." }
+      post "/experiences.json", params: { student_id: 2, start_date: "2024-01-14", end_date: "2024-5-16", job_title: "student", company_name: "actualize", details: "time to become the best software engineer i can be." }
       assert_response 200
     end
   end
