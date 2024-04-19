@@ -24,4 +24,5 @@ Rails.application.routes.draw do
   post "/experiences" => "experiences#create"
   patch "/experiences/:id" => "experiences#update"
   delete "/experiences/:id" => "experiences#destroy"
+  post "/users" => "users#create"
 end
