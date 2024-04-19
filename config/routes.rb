@@ -20,4 +20,5 @@ Rails.application.routes.draw do
   delete "/capstones/:id" => "capstones#destroy"
 
   get "/educations" => "educations#index"
+  post "/educations" => "educations#create"
 end
